@@ -4,6 +4,7 @@ import Button from "./Components/button";
 import { Modal } from "./Components/modal";
 import { Action } from "./Components/actions";
 import { Wrapper } from "./App.styled";
+import { Backdrop } from "./Components/backdrop/Backdrop";
 
 class App extends Component {
   state = {
@@ -37,27 +38,26 @@ class App extends Component {
           />
         </Wrapper>
         {this.state.showFirstModal && (
-          <Wrapper>
+          <Backdrop handleClick={this.showFirstModal}>
             <Modal
               header="Do you want to delete this file?"
               closeButton={true}
-              text="Once you delete this file, it won't be possible to undo this action. Are you sure you want to delete it?"
-              actions=""
+              text="Once you delete this file, it won't be possible to undo this action."
               callBackFunction={this.showFirstModal}
             />
-          </Wrapper>
+          </Backdrop>
         )}
         ;
         {this.state.showSecondModal && (
-          <Wrapper>
+          <Backdrop handleClick={this.showSecondModal}>
             <Modal
               header="Do you want to save this file?"
               closeButton={false}
               text="Once you save this file, you will have access to it any time. Are you sure you want to save it?"
-              actions={<Action />}
+              actions={<Action handleClick={this.showSecondModal} />}
               callBackFunction={this.showSecondModal}
             />
-          </Wrapper>
+          </Backdrop>
         )}
       </>
     );

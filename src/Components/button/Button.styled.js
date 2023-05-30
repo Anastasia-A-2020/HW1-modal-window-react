@@ -9,12 +9,6 @@ const Btn = styled.button`
   color: #fff;
   font-size: 24px;
   cursor: pointer;
-  transition: transform 250ms ease-in-out;
-
-  &:hover,
-  &:focus {
-    transform: scale(1.1);
-  }
 `;
 
 export { Btn };

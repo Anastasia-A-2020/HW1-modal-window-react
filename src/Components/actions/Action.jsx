@@ -2,18 +2,18 @@ import React from "react";
 import Button from "../button";
 import { Container } from "./Action.styled";
 
-const Action = () => {
+const Action = (props) => {
     return (
         <Container>
              <Button
                 bgColor="blue"
                 text="Ok"
-                handleClick={() => alert("ok")}
+                handleClick={props.handleClick}
               />
                  <Button
                 bgColor="red"
                 text="Cancel"
-                handleClick={() => alert("ok")}
+                handleClick={props.handleClick}
               />
         </Container>
     )
