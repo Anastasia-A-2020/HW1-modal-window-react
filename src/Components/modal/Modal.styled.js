@@ -5,7 +5,7 @@ const Container = styled.div`
   border: 2px solid brown;
   border-radius: 4px;
   padding: 80px 15px 15px;
-
+  z-index: 100;
   background-color: brown;
   color: white;
 `;

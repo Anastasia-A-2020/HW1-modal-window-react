@@ -7,7 +7,7 @@ const BackdropWrapper = styled.div`
   width: 100%;
   height: 100%;
   background-color: #00000080;
-  z-index: 100;
+  z-index: 0;
   display: flex;
   justify-content: center;
   align-items: center;

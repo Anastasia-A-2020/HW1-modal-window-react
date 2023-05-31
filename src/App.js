@@ -12,7 +12,7 @@ class App extends Component {
     showSecondModal: false,
   };
 
-  showFirstModal = () => {
+  showFirstModal = e => {
     this.setState(prevState => {
       return { showFirstModal: !prevState.showFirstModal };
     });
@@ -22,6 +22,11 @@ class App extends Component {
       return { showSecondModal: !prevState.showSecondModal };
     });
   };
+
+  onBackdropClik = e => {
+    if (e.target.dataset.test === "backdrop") this.showFirstModal();
+  };
+
   render() {
     return (
       <>
@@ -38,7 +43,7 @@ class App extends Component {
           />
         </Wrapper>
         {this.state.showFirstModal && (
-          <Backdrop handleClick={this.showFirstModal}>
+          <Backdrop handleClick={this.onBackdropClik}>
             <Modal
               header="Do you want to delete this file?"
               closeButton={true}
