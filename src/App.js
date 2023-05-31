@@ -54,7 +54,7 @@ class App extends Component {
         )}
         ;
         {this.state.showSecondModal && (
-          <Backdrop handleClick={this.showSecondModal}>
+          <Backdrop handleClick={this.onBackdropClik}>
             <Modal
               header="Do you want to save this file?"
               closeButton={false}
