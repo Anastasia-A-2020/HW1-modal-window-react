@@ -7,7 +7,7 @@ class Backdrop extends Component {
       <BackdropWrapper
         className="backdrop"
         onMouseDown={this.props.handleClick}
-        data-test="backdrop"
+        data-name="backdrop"
       >
         {this.props.children}
       </BackdropWrapper>
